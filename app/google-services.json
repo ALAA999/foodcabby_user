@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "227386575517",
+    "firebase_url": "https://foodcaby.firebaseio.com",
+    "project_id": "foodcaby",
+    "storage_bucket": "foodcaby.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227386575517:android:e7b748e4a6fe7a5a3a2274",
+        "android_client_info": {
+          "package_name": "com.foodbox.foodcabby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227386575517-l4ru4urniikqaqo3dp484v56h2ggld43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodbox.app",
+            "certificate_hash": "0a09fecee7963a30de80a6187d646ff967e8c4ef"
+          }
+        },
+        {
+          "client_id": "227386575517-o1aqv6nrkvkgt0l0hf2vt08qlq5g195r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARPXagFInIFVVWRzD0NInfhHvVlACUXxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227386575517-o1aqv6nrkvkgt0l0hf2vt08qlq5g195r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

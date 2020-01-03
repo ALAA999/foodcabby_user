@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profile_settings">
+        <item>"التحكم بالعناوين"</item>
+        <item>"المفضلة"</item>
+        <item>"الدفع"</item>
+        <item>"طلباتي"</item>
+        <!--<item>"Notifications"</item>-->
+        <item>"تفاصيل الترويج"</item>
+        <!--<item>"Change Language"</item>-->
+        <item>"تغيير كلمة المرور"</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>الانجليزية</item>
+        <item>العريبة</item>
+        <item>الالمانية</item>
+    </string-array>
+
+
+</resources>
