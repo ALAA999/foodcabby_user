@@ -82,15 +82,17 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/button_2"
+        android:background="@drawable/rounded_button"
         android:minHeight="0dp"
         android:minWidth="50dp"
         android:padding="4dp"
         android:text="@string/add"
-        android:textColor="#00a551"
+        android:textColor="@color/colorWhite"
         android:textSize="@dimen/text_small"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_text" />
+        app:layout_constraintTop_toBottomOf="@+id/category_text"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_8sdp"/>
 </android.support.constraint.ConstraintLayout>

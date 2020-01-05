@@ -354,7 +354,7 @@ public class ProfileFragment extends Fragment {
 
             userPhone.setText(GlobalData.profileModel.getPhone());
             userName.setText(GlobalData.profileModel.getName());
-            userEmail.setText(" - " + GlobalData.profileModel.getEmail());
+            userEmail.setText(GlobalData.profileModel.getEmail() );
         }
     }
 

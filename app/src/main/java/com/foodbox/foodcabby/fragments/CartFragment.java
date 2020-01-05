@@ -5,10 +5,12 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,6 +29,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
+import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.request.RequestOptions;
@@ -189,6 +193,22 @@ public class CartFragment extends Fragment {
         orderItemRv.setHasFixedSize(false);
         orderItemRv.setNestedScrollingEnabled(false);
 
+        final FragmentTransaction[] transaction = new FragmentTransaction[1];
+        fragmentManager = getActivity().getSupportFragmentManager();
+        transaction[0] = fragmentManager.beginTransaction();
+        Button shop_now_open_home_fragment = (Button) view.findViewById(R.id.shop_now_open_home_fragment);
+
+        shop_now_open_home_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentManager = getActivity().getSupportFragmentManager();
+                transaction[0] = fragmentManager.beginTransaction();
+                Fragment fragment = new HomeFragment();
+                transaction[0] = fragmentManager.beginTransaction();
+                transaction[0].replace(R.id.main_container, fragment).commit();
+            }
+        });
+
         //Intialize address Value
         if (GlobalData.selectedAddress != null && GlobalData.selectedAddress.getLandmark() != null) {
             if (GlobalData.addressList.getAddresses().size() == 1)
@@ -285,7 +305,7 @@ public class CartFragment extends Fragment {
                             priceAmount = priceAmount + 2 + 2.975;
                             minimum_amount.setText(currency + "2");
                         } else if (priceAmount > 10 && priceAmount <= 12) {
-                            double min =  Double.parseDouble(new DecimalFormat("##.##").format(12 - priceAmount));
+                            double min = Double.parseDouble(new DecimalFormat("##.##").format(12 - priceAmount));
                             Log.e(getClass().getName() + "min", "" + min);
                             priceAmount = priceAmount + (12 - priceAmount) + 2.975;
                             minimum_amount.setText(currency + min);

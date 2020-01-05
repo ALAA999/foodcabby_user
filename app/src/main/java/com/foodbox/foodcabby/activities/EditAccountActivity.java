@@ -126,8 +126,8 @@ public class EditAccountActivity extends AppCompatActivity {
 
             RequestOptions options = new RequestOptions()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .placeholder(R.drawable.ic_restaurant_place_holder)
-                    .error(R.drawable.ic_restaurant_place_holder)
+                    .placeholder(R.drawable.man)
+                    .error(R.drawable.man)
                     .priority(Priority.HIGH);
 
             Glide

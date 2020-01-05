@@ -37,11 +37,13 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@drawable/button_corner_bg_theme"
+                android:background="@drawable/rounded_button"
                 android:text="@string/add"
                 android:textAllCaps="true"
                 android:textColor="@color/colorTextWhite"
-                android:textSize="@dimen/text_medium" />
+                android:textSize="@dimen/text_medium"
+                android:paddingRight="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_8sdp"/>
 
         </RelativeLayout>
 

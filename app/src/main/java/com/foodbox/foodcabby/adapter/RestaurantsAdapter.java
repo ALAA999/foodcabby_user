@@ -141,4 +141,9 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
             }
         }
     }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position % 2 * 2;
+    }
 }

@@ -20,8 +20,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/colorPrimaryToolbar"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:contentScrim="#EF4166"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_75sdp"
+                android:layout_marginRight="@dimen/_75sdp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="bottom|center">
+
+                <include
+                    android:id="@+id/toolbar_header_view"
+                    layout="@layout/header_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -107,7 +127,8 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="@dimen/_75sdp"
-                        android:layout_marginRight="@dimen/_75sdp">
+                        android:layout_marginRight="@dimen/_75sdp"
+                        android:gravity="center_vertical">
 
                         <include
                             android:id="@+id/toolbar_header_view"

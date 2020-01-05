@@ -110,8 +110,8 @@
                 android:visibility="gone">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:layout_marginTop="@dimen/_70sdp"
                     android:padding="8dp"
                     android:src="@drawable/no_restaurant_found" />
@@ -120,12 +120,12 @@
                     fontPath="fonts/Nunito-Bold.ttf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     android:gravity="center"
                     android:maxLines="1"
                     android:text="@string/no_restaurant_found"
                     android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryText"
+                    android:textColor="#EF4166"
                     android:textSize="22sp"
                     tools:ignore="MissingPrefix" />
 

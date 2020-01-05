@@ -21,6 +21,7 @@
     <color name="foreground_material_light">#f65145</color>
 
 
+
     <array name="array_dot_active">
         <item>@color/grey</item>
         <item>@color/grey</item>

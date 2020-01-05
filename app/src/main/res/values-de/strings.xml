@@ -41,7 +41,7 @@
     <string name="work">"Arbeit"</string>
     <string name="other">"Andere"</string>
     <string name="save">"sparen"</string>
-    <string name="saved_addresses">"Saved Addresses"</string>
+    <string name="saved_addresses">"Gespeicherte Adressen"</string>
     <string name="edit">"Bearbeiten"</string>
     <string name="delete">"Löschen"</string>
     <string name="delete_confirm">"Wollen Sie wirklich löschen?"</string>
@@ -83,8 +83,8 @@ Fügen Sie Ihrem Lesezeichen Orte hinzu, die Sie in Zukunft besuchen möchten
     <string name="new_password">Neues Passwort</string>
     <string name="change">Veränderung</string>
     <string name="register">Registrieren</string>
-    <string name="cart_error_title">Gutes Essen wird immer gekocht</string>
-    <string name="cart_error_description">Bitte bestellen Sie das Geschirr</string>
+    <string name="cart_error_title">Leerer Warenkorb!</string>
+    <string name="cart_error_description">ein Produkt in den Warenkorb legen</string>
     <string name="proceed_to_pay">Weiter zur Zahlung</string>
     <string name="add_address">Adresse hinzufügen</string>
     <string name="change_address">Adresse ändern</string>
@@ -331,4 +331,5 @@ Sobald Sie einen Promotion-Code haben, wird dieser hier angezeigt.
     <string name="_32_mins">32 mins</string>
     <string name="search">Suche</string>
     <string name="connect_with_social">Verbinden Sie sich mit sozialen</string>
+    <string name="jetzt_einkaufen">Jetzt einkaufen</string>
 </resources>

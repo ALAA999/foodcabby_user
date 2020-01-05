@@ -21,6 +21,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
@@ -246,6 +247,16 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
         });
         if (GlobalData.profileModel != null)
             getDisputeMessage();
+
+       /* Button shop_now_open_home_fragment = (Button) findViewById(R.id.shop_now_open_home_fragment);
+        shop_now_open_home_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment = new HomeFragment();
+                transaction.add(R.id.main_container, fragment).commit();
+                bottomNavigation.setCurrentItem(0);
+            }
+        });*/
     }
 
     private void getDisputeMessage() {

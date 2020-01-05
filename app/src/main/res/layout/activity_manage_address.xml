@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/manage_address"
                 android:textAllCaps="true"
-                android:textColor="@color/colorPrimaryText"
+                android:textColor="#EF4166"
                 android:textSize="18sp" />
 
         </android.support.v7.widget.Toolbar>
@@ -113,9 +113,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
-        android:background="@drawable/button_corner_radius"
+        android:background="@drawable/rounded_button"
         android:text="@string/add_new_address"
-        android:textColor="@color/theme" />
+        android:textColor="@color/colorWhite" />
 
 
 </RelativeLayout>

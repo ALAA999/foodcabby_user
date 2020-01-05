@@ -111,6 +111,7 @@ public class AccountPaymentActivity extends AppCompatActivity {
 //    private ProgressDialog mLoading;
     public static RadioButton cashCheckBox;
     public static Button proceedToPayBtn;
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.payment_method_lv)
@@ -174,6 +175,8 @@ public class AccountPaymentActivity extends AppCompatActivity {
         cashPaymentLayout = (LinearLayout) findViewById(R.id.cash_payment_layout);
         walletPaymentLayout = (LinearLayout) findViewById(R.id.wallet_payment_layout);
         proceedToPayBtn = (Button) findViewById(R.id.proceed_to_pay_btn);
+
+
         cashCheckBox = (RadioButton) findViewById(R.id.cash_check_box);
 
         setSupportActionBar(toolbar);

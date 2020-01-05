@@ -23,8 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/dish_img"
-        android:backgroundTint="@android:color/transparent"
-        android:text="@string/add" />
+        android:background="@drawable/rounded_button"
+        android:text="@string/add"
+        android:textColor="@color/colorWhite"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_8sdp"/>
 
     <TextView
         android:id="@+id/dish_name"

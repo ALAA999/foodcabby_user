@@ -40,12 +40,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/user_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:maxLines="1"
                     android:paddingEnd="@dimen/_5sdp"
                     android:paddingStart="0dp"
@@ -54,8 +55,8 @@
                 <TextView
                     android:id="@+id/user_mail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_weight="10"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:paddingEnd="@dimen/_5sdp"
@@ -66,6 +67,12 @@
 
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:background="@drawable/ic_settingic"
+            android:layout_marginRight="@dimen/_8sdp">
         <Button
             android:id="@+id/edit"
             android:layout_width="@dimen/_40sdp"
@@ -73,9 +80,9 @@
             android:background="?attr/selectableItemBackground"
             android:gravity="end|center_vertical"
             android:paddingEnd="@dimen/_10sdp"
-            android:text="@string/edit"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/text_small" />
+        </FrameLayout>
 
     </LinearLayout>
 
