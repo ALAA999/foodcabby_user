@@ -89,7 +89,7 @@
                     android:id="@+id/flat_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="House / Flat No"
+                    android:hint="Hausnummer"
                     android:inputType="textPostalAddress"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="@dimen/text_medium" />
@@ -107,7 +107,7 @@
                     android:id="@+id/landmark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Landmark"
+                    android:hint="Postleitzahl"
                     android:imeOptions="actionDone"
                     android:inputType="textPostalAddress"
                     android:textColor="@color/colorPrimaryText"
@@ -124,7 +124,8 @@
             android:layout_marginTop="16dp"
             android:text="@string/save_as"
             android:textAllCaps="true"
-            android:textSize="@dimen/text_tiny" />
+            android:textSize="@dimen/text_tiny"
+            android:visibility="invisible"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,7 +145,7 @@
                 <RadioButton
                     android:id="@+id/home_radio"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:button="@null"
                     android:drawableTop="@drawable/home_selector"
@@ -152,7 +153,9 @@
                     android:padding="@dimen/_3sdp"
                     android:text="@string/home"
                     android:textAllCaps="true"
-                    android:textColor="@color/item_tint_selector" />
+                    android:textColor="@color/item_tint_selector"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_4sdp"/>
 
                 <RadioButton
                     android:id="@+id/work_radio"
@@ -165,7 +168,8 @@
                     android:padding="@dimen/_3sdp"
                     android:text="@string/work"
                     android:textAllCaps="true"
-                    android:textColor="@color/item_tint_selector" />
+                    android:textColor="@color/item_tint_selector"
+                    android:layout_gravity="center"/>
 
                 <RadioButton
                     android:id="@+id/other_radio"
@@ -178,7 +182,8 @@
                     android:padding="@dimen/_3sdp"
                     android:text="@string/other"
                     android:textAllCaps="true"
-                    android:textColor="@color/item_tint_selector" />
+                    android:textColor="@color/item_tint_selector"
+                    android:layout_gravity="center"/>
 
             </RadioGroup>
 
@@ -202,7 +207,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="@string/cancel"
-                    android:textColor="@color/colorSecondaryText" />
+                    android:textColor="@color/colorSecondaryText"
+                    android:visibility="gone"/>
 
             </RelativeLayout>
 

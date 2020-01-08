@@ -39,6 +39,7 @@ import com.foodbox.foodcabby.models.User;
 import com.foodbox.foodcabby.utils.TextUtils;
 import com.foodbox.foodcabby.utils.Utils;
 import com.foodbox.foodcabby.R;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONObject;
@@ -209,16 +210,25 @@ public class EditAccountActivity extends AppCompatActivity {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
+                Log.e(getClass().getName() + "updateProfile", response.toString());
                 customDialog.cancel();
                 if (response.isSuccessful()) {
-                    GlobalData.profileModel = response.body();
-                    finish();
-                    Toast.makeText(context, getResources().getString(R.string.profile_updated_successfully), Toast.LENGTH_SHORT).show();
+                    if (response.body().getEmail().equalsIgnoreCase("duplicated")) {
+                        Toast.makeText(context, "E-Mail-Adresse ist bereits vergeben. Bitte geben Sie eine andere E-Mail-Adresse ein.", Toast.LENGTH_SHORT).show();
+                        Log.e("updateProfile", "duplicated");
+                    } else {
+                        GlobalData.profileModel = response.body();
+                        finish();
+                        Toast.makeText(context, getResources().getString(R.string.profile_updated_successfully), Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     try {
+                        Log.e("error", response.errorBody().toString());
                         JSONObject jObjError = new JSONObject(response.errorBody().toString());
+
                         Toast.makeText(context, jObjError.optString("error"), Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
+                        Log.e("updateProfile", e.getMessage());
                         Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
@@ -227,7 +237,9 @@ public class EditAccountActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
                 customDialog.cancel();
-                Toast.makeText(context, getResources().getString(R.string.network_error_toast), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, getResources().getString(R.string.network_error_toast) + call.toString(), Toast.LENGTH_SHORT).show();
+                Log.e(getClass().getName() + "1", call.toString());
+                Log.e(getClass().getName() + "2", t.getMessage());
             }
         });
     }

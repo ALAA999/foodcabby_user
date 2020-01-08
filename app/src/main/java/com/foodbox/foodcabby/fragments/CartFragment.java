@@ -314,8 +314,16 @@ public class CartFragment extends Fragment {
                             priceAmount = priceAmount + 2.975;
                         }
 
-                        //      RRR Delivery Fee
-                        deliveryCharges.setText(currency + "" + response.body().getDeliveryCharges().toString());
+
+
+                        try {
+                            //      RRR Delivery Fee
+                            String temp = response.body().getDeliveryCharges().toString();
+                            deliveryCharges.setText(currency + "" + temp.substring(0, temp.lastIndexOf(".") + 3));
+                        }catch (Exception e){
+                            deliveryCharges.setText(currency + "" + response.body().getDeliveryCharges().toString());
+                        }
+
 
                         //      RRR IGST
                         double itemTotalIGST;
@@ -346,7 +354,15 @@ public class CartFragment extends Fragment {
                         Log.e(getClass().getName() + "itemTotalDiscount", "" + itemTotalDiscount);
                         Log.e(getClass().getName() + "igstVal", "" + igstVal);
                         Log.e(getClass().getName() + "discount", "" + discount);
-                        discountAmount.setText("" + currency + "" + discount);
+
+
+                        try {
+                            //      RRR Delivery Fee
+                            String temp = discount + "";
+                            discountAmount.setText(currency + "" + temp.substring(0, temp.lastIndexOf(".") + 3));
+                        }catch (Exception e){
+
+                        }
 
                         int money = GlobalData.profileModel.getWalletBalance();
                         //      RRR Total Payable Amount
@@ -356,7 +372,12 @@ public class CartFragment extends Fragment {
                         Log.e(getClass().getName() + "getDeliveryCharges", "" + response.body().getDeliveryCharges());
                         Log.e(getClass().getName() + "money", "" + money);
 
-                        payAmount.setText(currency + "" + itemTotalDiscount);
+                        try {
+                            String tmp = itemTotalDiscount + "";
+                            payAmount.setText(currency + "" + tmp.substring(0, tmp.lastIndexOf(".") + 3));
+                        }catch (Exception e){
+                            payAmount.setText(currency + "" + itemTotalDiscount);
+                        }
 
                         //Set Restaurant Details
                         restaurantName.setText(response.body().getProductList().get(0).getProduct().getShop().getName());

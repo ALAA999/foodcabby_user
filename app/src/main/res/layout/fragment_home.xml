@@ -125,7 +125,7 @@
                     android:maxLines="1"
                     android:text="@string/no_restaurant_found"
                     android:textAllCaps="true"
-                    android:textColor="#EF4166"
+                    android:textColor="@color/colorAccent"
                     android:textSize="22sp"
                     tools:ignore="MissingPrefix" />
 

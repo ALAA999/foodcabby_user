@@ -82,7 +82,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         holder.category.setText(shops.getDescription());
         if (shops.getOfferPercent() == null) holder.offer.setVisibility(View.GONE);
         else {
-            holder.offer.setVisibility(View.VISIBLE);
+//            holder.offer.setVisibility(View.VISIBLE);
             holder.offer.setText("Flat " + shops.getOfferPercent().toString() + "% offer on all Orders");
         }
         holder.closedLay.setVisibility("CLOSED".equalsIgnoreCase(shops.getShopstatus()) ? View.VISIBLE : View.GONE);

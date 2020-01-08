@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:text="@string/funkies"
-                android:textColor="#EF4166"
+                android:textColor="@color/colorAccent"
                 android:textSize="@dimen/text_small" />
 
             <LinearLayout
@@ -77,7 +77,7 @@
                     android:paddingEnd="8dp"
                     android:paddingStart="0dp"
                     android:text="4.2"
-                    android:textColor="#FFD705"
+                    android:textColor="@color/yellow"
                     android:textSize="@dimen/text_tiny" />
 
                 <TextView

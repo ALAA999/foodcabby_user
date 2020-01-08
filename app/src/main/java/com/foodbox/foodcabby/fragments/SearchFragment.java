@@ -134,7 +134,7 @@ public class SearchFragment extends Fragment {
         //ViewPager Adapter
         adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
         adapter.addFragment(new RestaurantSearchFragment(), "RESTAURANT");
-        adapter.addFragment(new ProductSearchFragment(), "DISHES");
+        adapter.addFragment(new ProductSearchFragment(), "Gerichte");
         viewPager.setOffscreenPageLimit(2);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -179,9 +179,9 @@ public class SearchFragment extends Fragment {
                     getSearch(map);
                     searchCloseImg.setVisibility(View.VISIBLE);
                     rootLayout.setVisibility(View.VISIBLE);
-                    relatedTxt.setText("Related to \"" + s.toString() + "\"");
+                    relatedTxt.setText("Ergebnisse in Zusammenhang mit \"" + s.toString() + "\"");
                 } else if (s.length() == 0) {
-                    relatedTxt.setText("Related to ");
+                    relatedTxt.setText("Ergebnisse in Zusammenhang mit ");
                     searchCloseImg.setVisibility(View.GONE);
                     rootLayout.setVisibility(View.GONE);
                     searchShopList.clear();

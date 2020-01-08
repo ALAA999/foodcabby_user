@@ -97,12 +97,13 @@ public class FavouritesActivity extends AppCompatActivity {
                     }
 
                     FavListModel model = new FavListModel();
-                    model.setHeader("available");
+//                    model.setHeader("available");
                     model.setFav(response.body().getAvailable());
                     modelList.add(model);
 
                     model = new FavListModel();
-                    model.setHeader("un available");
+//                    model.setHeader("un available");
+
 
                     List<Available> list = new ArrayList<>();
                     for (UnAvailable obj : response.body().getUnAvailable()) {
@@ -112,7 +113,7 @@ public class FavouritesActivity extends AppCompatActivity {
                         list.add(cust);
                     }
                     model.setFav(list);
-                    modelList.add(model);
+//                    modelList.add(model);
 
                     modelListReference.clear();
                     modelListReference.addAll(modelList);

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -93,8 +94,10 @@ public class OrdersActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<Order>>() {
             @Override
             public void onResponse(@NonNull Call<List<Order>> call, @NonNull Response<List<Order>> response) {
+                Log.e("onResponse","onResponse");
                 customDialog.dismiss();
                 if (response.isSuccessful()) {
+                    Log.e("onResponse","isSuccessful");
                     pastOrderList.clear();
                     pastOrderList = response.body();
                     OrderModel model = new OrderModel();
@@ -121,7 +124,8 @@ public class OrdersActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Call<List<Order>> call, @NonNull Throwable t) {
                 customDialog.dismiss();
-                Toast.makeText(OrdersActivity.this, "Some thing went wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OrdersActivity.this, "Some thing went wrong"  + call.toString(), Toast.LENGTH_SHORT).show();
+                Log.e("OrdersActivityonFail1",t.getMessage());
             }
         });
 
@@ -156,9 +160,11 @@ public class OrdersActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(@NonNull Call<List<Order>> call, @NonNull Throwable t) {
-                Toast.makeText(OrdersActivity.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OrdersActivity.this, "Something went wrong!" , Toast.LENGTH_SHORT).show();
                 getPastOrders();
                 customDialog.dismiss();
+                Log.e("OrdersActivityonFail2",t.getMessage());
+                Log.e("OrdersActivityonFail3",call.toString());
             }
         });
 

@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/manage_address"
                 android:textAllCaps="true"
-                android:textColor="#EF4166"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
         </android.support.v7.widget.Toolbar>

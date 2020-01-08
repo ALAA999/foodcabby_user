@@ -122,10 +122,10 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartAdapter.MyView
                         }
                         if (response.body().getProductList().get(0).getProduct().getShop().getOfferMinAmount() != null)
                             if (response.body().getProductList().get(0).getProduct().getShop().getOfferMinAmount() < priceAmount) {
-                                try{
+                                try {
                                     int offerPercentage = response.body().getProductList().get(0).getProduct().getShop().getOfferPercent();
                                     discount = (int) (priceAmount * (offerPercentage * 0.01));
-                                }catch (Exception e){
+                                } catch (Exception e) {
 
                                 }
                             }
@@ -145,7 +145,7 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartAdapter.MyView
                             priceAmount = priceAmount + 2 + 2.975;
                             minimum_amount.setText(currency + "2");
                         } else if (priceAmount > 10 && priceAmount <= 12) {
-                            double min =  Double.parseDouble(new DecimalFormat("##.##").format(12 - priceAmount));
+                            double min = Double.parseDouble(new DecimalFormat("##.##").format(12 - priceAmount));
                             Log.e(getClass().getName() + "min", "" + min);
                             priceAmount = priceAmount + (12 - priceAmount) + 2.975;
                             minimum_amount.setText(currency + min);
@@ -169,16 +169,21 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartAdapter.MyView
                         double itemTotalDiscount;
                         if (response.body().getProductList().get(0).getProduct().getShop().getOfferMinAmount() != null)
                             if (response.body().getProductList().get(0).getProduct().getShop().getOfferMinAmount() < priceAmount) {
-                                try{
+                                try {
                                     int offerPercentage = response.body().getProductList().get(0).getProduct().getShop().getOfferPercent();
                                     discount = (itemTotalIGST * offerPercentage) / 100;
-                                }catch (Exception e){
+                                } catch (Exception e) {
 
                                 }
 
                             }
                         itemTotalDiscount = itemTotalIGST - discount;
-                        CartFragment.discountAmount.setText("- " + currency + "" + discount);
+                        try {
+                            String temp = discount + "";
+                            CartFragment.discountAmount.setText("- " + currency + "" + temp.substring(0, temp.lastIndexOf(".") + 3));
+                        } catch (Exception e) {
+                            CartFragment.discountAmount.setText("- " + currency + "" + discount);
+                        }
 
                         //      RRR Total Payable Amount
                         double topPayAmount = itemTotalDiscount + response.body().getDeliveryCharges();
@@ -190,7 +195,15 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartAdapter.MyView
                         Log.e(getClass().getName() + "topPayAmount", "" + topPayAmount);
                         Log.e(getClass().getName() + "getDeliveryCharges", "" + response.body().getDeliveryCharges());
 
-                        CartFragment.payAmount.setText(currency + "" + itemTotalDiscount);
+
+
+                        try {
+                            //      RRR Delivery Fee
+                            String temp = itemTotalDiscount + "";
+                            CartFragment.payAmount.setText(currency + "" + temp.substring(0, temp.lastIndexOf(".") + 3));
+                        }catch (Exception e){
+                            CartFragment.payAmount.setText(currency + "" + itemTotalDiscount);
+                        }
 
                     } else {
                         GlobalData.notificationCount = itemQuantity;
@@ -245,8 +258,8 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartAdapter.MyView
                 priceAmount = priceAmount + (list.get(position).getQuantity()
                         * (list.get(position).getCartAddons().get(j).getQuantity()
                         * list.get(position).getCartAddons().get(j).getAddonProduct().getPrice()));
-            priceAmount = Double.parseDouble(new DecimalFormat("##.##")
-                    .format(priceAmount));
+        priceAmount = Double.parseDouble(new DecimalFormat("##.##")
+                .format(priceAmount));
         holder.priceTxt.setText(product.getPrices().getCurrency() + " " + priceAmount);
         if (!product.getFoodType().equalsIgnoreCase("veg"))
             holder.foodImageType.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_nonveg));

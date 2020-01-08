@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">"Foodcabby"</string>
+    <string name="app_name" translatable="false">"Food cabby"</string>
 
     <string name="facebook_app_id" translatable="false">426881031561844</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb[426881031561844]</string>
-    <string name="google_maps_key">AIzaSyDwFc97AGfeqzqBmL2eVFxgeHm-CQNnvNM</string>
+    <string name="google_maps_key" translatable="false">AIzaSyDwFc97AGfeqzqBmL2eVFxgeHm-CQNnvNM</string>
 
     <string name="login">Einloggen</string>
     <string name="logout">Ausloggen</string>
@@ -39,9 +39,9 @@
     <string name="current_location">"Aktueller Standort"</string>
     <string name="dish">"Gericht"</string>
     <string name="home">"Startseite"</string>
-    <string name="work">"Arbeit"</string>
+    <string name="work">"Adresse Arbeit"</string>
     <string name="other">"Andere"</string>
-    <string name="save">"sparen"</string>
+    <string name="save">"Speichern"</string>
     <string name="saved_addresses">"Gespeicherte Adressen"</string>
     <string name="edit">"Bearbeiten"</string>
     <string name="delete">"Löschen"</string>

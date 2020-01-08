@@ -105,7 +105,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
             if (bottomNavigation != null)
                 bottomNavigation.setNotification(notification, 2);
         } else if (bottomNavigation != null) {
-            bottomNavigation.setNotificationBackgroundColor(ContextCompat.getColor(context, R.color.theme));
+            bottomNavigation.setNotificationBackgroundColor(ContextCompat.getColor(context, R.color.colorAccent));
             bottomNavigation.setNotification(String.valueOf(itemCount), 2);
         }
 
@@ -206,7 +206,7 @@ public class HomeActivity extends AppCompatActivity implements LocationListener,
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_HIDE);
 
 // Change colors
-        bottomNavigation.setAccentColor(Color.parseColor("#FF5722"));
+        bottomNavigation.setAccentColor(Color.parseColor("#EF4166"));
         bottomNavigation.setInactiveColor(Color.parseColor("#747474"));
 
 

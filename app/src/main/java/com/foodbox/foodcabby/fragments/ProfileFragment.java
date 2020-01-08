@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -153,12 +155,30 @@ public class ProfileFragment extends Fragment {
         super.onCreate(savedInstanceState);
         this.context = getContext();
         this.activity = getActivity();
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         ButterKnife.bind(this, view);
+
+        final FragmentManager[] fragmentManager = new FragmentManager[1];
+        final FragmentTransaction[] transaction = new FragmentTransaction[1];
+        fragmentManager[0] = getActivity().getSupportFragmentManager();
+        transaction[0] = fragmentManager[0].beginTransaction();
+        Button shop_now_open_home_fragment = (Button) view.findViewById(R.id.shop_now_open_home);
+        shop_now_open_home_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentManager[0] = getActivity().getSupportFragmentManager();
+                transaction[0] = fragmentManager[0].beginTransaction();
+                Fragment fragment = new HomeFragment();
+                transaction[0] = fragmentManager[0].beginTransaction();
+                transaction[0].replace(R.id.main_container, fragment).commit();
+            }
+        });
 
         return view;
     }

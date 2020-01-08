@@ -242,7 +242,7 @@
                         android:layout_height="@dimen/_35sdp"
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_weight="1"
-                        android:background="@drawable/button_corner_bg_theme"
+                        android:background="@drawable/rounded_button_with_storck"
                         android:text="@string/add_address"
                         android:textColor="@color/colorTextWhite" />
 

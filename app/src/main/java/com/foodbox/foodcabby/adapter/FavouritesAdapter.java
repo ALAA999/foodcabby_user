@@ -67,7 +67,7 @@ public class FavouritesAdapter extends SectionedRecyclerViewAdapter<FavouritesAd
 
     @Override
     public void onBindHeaderViewHolder(FavouritesAdapter.ViewHolder holder, final int section) {
-        holder.header.setText(list.get(section).getHeader());
+//        holder.header.setText(list.get(section).getHeader());
         holder.header.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
