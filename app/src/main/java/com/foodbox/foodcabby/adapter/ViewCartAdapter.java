@@ -209,7 +209,7 @@ public class ViewCartAdapter extends RecyclerView.Adapter<ViewCartAdapter.MyView
                         GlobalData.notificationCount = itemQuantity;
                         CartFragment.errorLayout.setVisibility(View.VISIBLE);
                         CartFragment.dataLayout.setVisibility(View.GONE);
-                        Toast.makeText(context, "Cart is empty", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Leerer Warenkorb!", Toast.LENGTH_SHORT).show();
                     }
 
                 }

@@ -59,21 +59,10 @@
         "seams, divides space, and indicates moving parts."
 </string>
     <string name="getting_address">"Adresse abrufen"</string>
-    <string name="fresh">F r i s c h</string>
-    <string name="fresh_description">
-Entdecken Sie jeden Tag neue Gerichte und halten Sie Ihr Lieblingsrestaurant
-</string>
     <string name="signin">Anmelden</string>
     <string name="sign_in">Anmelden</string>
     <string name="signup">Registrieren</string>
     <string name="search">S u c h e</string>
-    <string name="search_description">
-Zeigen Sie Menüs, Fotos und Bewertungen für Restaurants in Ihrer Nähe an
-</string>
-    <string name="bookmark">Lesezeichen</string>
-    <string name="bookmark_description">
-Fügen Sie Ihrem Lesezeichen Orte hinzu, die Sie in Zukunft besuchen möchten
-</string>
     <string name="already_you_have_account">Sie haben bereits einen Account?</string>
     <string name="register_using">Registrieren Sie sich mit</string>
     <string name="signin_here">Hier anmelden</string>
@@ -146,19 +135,9 @@ Wenden Sie den Promo-Code an, um interessante Angebote zu erhalten
     <string name="dispute">Bestreiten</string>
     <!--     Check Internet Conneciton   -->
     <string name="oops_connect_your_internet">Hoppla ! Verbinden Sie Ihr Internet.</string>
-    <string name="retry">Wiederholen</string>
-    <string name="server_down">Server ausgefallen</string>
-    <string name="no_internet_found_check_your_internet_connection">
-Kein Internet gefunden. Überprüfen Sie Ihre Internetverbindung oder versuchen Sie es erneut
-</string>
     <!--    Braintree   -->
     <string name="loading">Wird geladen....</string>
-    <string name="paypal_billing_agreement">Abrechnungsvereinbarung</string>
-    <string name="nonce">nonce</string>
     <!--  CreateTransactionActivity  -->
-    <string name="processing_transaction">Transaktion wird verarbeitet</string>
-    <string name="transaction_failed">Transaktion fehlgeschlagen</string>
-    <string name="transaction_complete">Transaktion abgeschlossen</string>
     <!--  Alert Dialog  -->
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
@@ -235,7 +214,6 @@ Sobald Sie einen Promotion-Code haben, wird dieser hier angezeigt.
     <string name="type_a_message">Geben Sie eine Nachricht ein</string>
     <string name="my_account">Mein Konto</string>
     <string name="reorder">Nachbestellen</string>
-    <string name="please_login">Bitte loggen Sie sich ein</string>
     <string name="no_restaurant_found">Keine Restaurants!</string>
     <string name="no_restaurant_found_in_your_location">
 Überprüfen Sie, ob ein anderer Filter funktioniert.
@@ -251,10 +229,8 @@ Sobald Sie einen Promotion-Code haben, wird dieser hier angezeigt.
         <item quantity="one">+%d Add-On</item>
         <item quantity="other">+%d Add-Ons</item>
     </plurals>
-    <string name="registration">Anmeldung</string>
     <string name="choose_meal">Wählen Sie Mahlzeit</string>
     <string name="choose_resturant">Wählen Sie Restaurant</string>
-    <string name="follow_order">Befolgen Sie die Reihenfolge</string>
     <string name="service_tax">Servicesteuer</string>
     <string name="discount">Rabatt</string>
     <string name="delivery_charges">Versandkosten</string>
